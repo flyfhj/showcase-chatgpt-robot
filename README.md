@@ -47,7 +47,7 @@ chatgpt.wechat.enabled=false
 
 4、修改`chatgpt.qq.enabled`或`chatgpt.wechat.enabled`属性来控制QQ或Wechat机器人是否启动
 
-4、通过修改`chatgpt.completion.max-tokens`来控制交互数据的字符数(问题和答案的总和)
+5、通过修改`chatgpt.completion.max-tokens`来调整交互数据的字符数(问题和答案的总和)
 
 > Maven dependency
 
