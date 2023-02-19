@@ -79,8 +79,7 @@ chatgpt.wechat.enabled=false
 注意：mirai的版本必须是2.13.3+，以前的版本是通过QQ扫码授权，但是启动过程中一直显示`net.mamoe.mirai.internal.utils.crypto.DecryptionFailedException`异常，从2.13.3+版本开始QQ授权调整为短信认证的方式
 
 #### 效果图
-![image](https://user-images.githubusercontent.com/22070521/218131116-34828647-18c6-4afc-80f1-addc953311df.png)
-
+<img src="https://user-images.githubusercontent.com/22070521/218131116-34828647-18c6-4afc-80f1-addc953311df.png" width="60%">
 
 #### ChatGPT集成微信
 (待续)
