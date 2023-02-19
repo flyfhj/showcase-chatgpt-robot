@@ -3,7 +3,7 @@ package com.showcase.chatgpt.manager;
 import com.showcase.chatgpt.config.ChatGPTProperties;
 import com.showcase.chatgpt.config.ChatGPTProperties.Mirai;
 import com.showcase.chatgpt.config.ChatGPTProperties.QQ;
-import com.showcase.chatgpt.event.CustomerEventHandler;
+import com.showcase.chatgpt.manager.event.QQEventHandler;
 import net.mamoe.mirai.Bot;
 import net.mamoe.mirai.BotFactory;
 import net.mamoe.mirai.event.SimpleListenerHost;
@@ -31,7 +31,7 @@ public class QQChatGPTManager extends ChatGPTManager {
     @PostConstruct
     public void init() {
         QQChatGPTManager.this.newBotInstance(BotConfiguration.getDefault(), this.mirai)
-            .registerListener(new CustomerEventHandler(this))
+            .registerListener(new QQEventHandler(this))
             .start();
     }
 

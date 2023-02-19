@@ -6,6 +6,8 @@
 
 * openai-java [基于 OpenAI 的 GPT-3 api 的 Java 库](https://github.com/TheoKanning/openai-java)
 
+* wechat-api [微信个人号的Java版本API库](https://github.com/hellokaton/wechat-api)
+
 ### 准备工作
  
 #### 注册ChatGPT账号(略)
@@ -18,7 +20,7 @@
 
 ```properties
 # chatgpt secret key
-chatgpt.apikey=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+chatgpt.api-key=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 chatgpt.completion.model=text-davinci-003
 chatgpt.completion.max-tokens=2048
 
@@ -29,8 +31,12 @@ chatgpt.mirai.device-file-name=derives.json
 chatgpt.mirai.working-dir=D:/dist
 
 # qq
+chatgpt.qq.enabled=true
 chatgpt.qq.number=8888888888
 chatgpt.qq.password=123456
+
+# wechat
+chatgpt.wechat.enabled=false
 ```
 
 1、chatgpt.apikey配置ChatGPT账号对应的secretKey
@@ -38,6 +44,8 @@ chatgpt.qq.password=123456
 2、若应用部署在Linux系统，注意修改`chatgpt.mirai.working-dir`的目录位置
 
 3、如果启动过程中提示<b>QQ版本过低，请升级至最新版本后再登录</b>，则可以尝试修改`chatgpt.mirai.protocol`为其它协议
+
+4、修改`chatgpt.qq.enabled`或`chatgpt.wechat.enabled`属性来控制QQ或Wechat机器人是否启动
 
 4、通过修改`chatgpt.completion.max-tokens`来控制交互数据的字符数(问题和答案的总和)
 
@@ -53,6 +61,11 @@ chatgpt.qq.password=123456
         <groupId>com.theokanning.openai-gpt3-java</groupId>
         <artifactId>client</artifactId>
         <version>0.9.0</version>
+    </dependency>
+    <dependency>
+        <groupId>io.github.biezhi</groupId>
+        <artifactId>wechat-api</artifactId>
+        <version>1.0.6</version>
     </dependency>
     <dependency>
         <groupId>net.mamoe</groupId>
